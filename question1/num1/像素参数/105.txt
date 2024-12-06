@@ -1,0 +1,19 @@
+# 定义普通车道和应急车道的矩形检测区域 (x_min, y_min, x_max, y_max)
+normal_lane_box = (410, 97, 549, 206)  # 普通车道矩形区域 (x_min, y_min, x_max, y_max)
+emergency_lane_box = (474, 233, 636, 370)  # 应急车道矩形区域 (x_min, y_min, x_max, y_max)
+
+# 定义检测区域的四个参考点 (x, y) 对应的像素坐标，表示检测区域的四边形
+detection_area = np.array([
+    [9, 256],  # 第一个点的像素坐标
+    [329, 352],  # 第二个点的像素坐标
+    [551, 216],  # 第三个点的像素坐标
+    [345, 166]  # 第四个点的像素坐标
+], dtype="float32")
+
+# 定义每像素的实际物理距离 (假设为水平和垂直方向)
+horizontal_pixel_distance = 0.1371   # 每水平像素代表的实际距离（米）
+vertical_pixel_distance = 0.2128  # 每垂直像素代表的实际距离（米）
+
+# 假设检测区域的实际物理长度，单位为米
+road_length_meters = 45  # 该区域的实际道路长度（米）
+

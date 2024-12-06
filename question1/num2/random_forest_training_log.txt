@@ -1,0 +1,8 @@
+Metric, Train, Test
+RMSE, 0.1790, 0.5336
+MAE, 0.0934, 0.2685
+R², 0.9933, 0.9515
+
+Model Parameters:
+n_estimators: 100
+max_depth: None
